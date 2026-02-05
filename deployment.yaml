@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: devops-shop
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: shop=azmatahmed/devops-shop
+    argocd-image-updater.argoproj.io/shop.update-strategy: latest
 spec:
   replicas: 2
   selector:
@@ -14,7 +17,7 @@ spec:
     spec:
       containers:
       - name: devops-shop
-        image: azmatahmed/devops-shop:v1   # <-- use versioned tag
+        image: azmatahmed/devops-shop:latest
         ports:
         - containerPort: 3000
 
