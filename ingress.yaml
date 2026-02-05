@@ -4,7 +4,7 @@ metadata:
   name: devops-shop-ingress
 spec:
   rules:
-  - host: devops.local
+  - host: shop.local
     http:
       paths:
       - path: /
