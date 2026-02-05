@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-shop
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devops-shop
+  template:
+    metadata:
+      labels:
+        app: devops-shop
+    spec:
+      containers:
+      - name: devops-shop
+        image: azmatahmed/devops-shop:v1   # <-- use versioned tag
+        ports:
+        - containerPort: 3000
+
