@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: devops-shop
-        image: azmatahmed/devops-shop:2
+        image: azmatahmed/devops-shop:3
         ports:
         - containerPort: 3000
 
