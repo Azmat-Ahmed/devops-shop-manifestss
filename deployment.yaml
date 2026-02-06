@@ -18,9 +18,8 @@ spec:
     spec:
       containers:
       - name: devops-shop
-        image: azmatahmed/devops-shop:100
-imagePullPolicy: Always
-
+        image: azmatahmed/devops-shop:101
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
 
